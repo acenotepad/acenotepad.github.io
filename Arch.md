@@ -4,8 +4,8 @@ filename: Arch.md
 ---
 
 ## 1. Download the ISO from the Arch Downloads
-	1. Pick any of the US versions - verify the hash value
-	2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.  
+### 1. Pick any of the US versions - verify the hash value
+### 2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.  
 
 ## 2. Before entering the VM, go into your settings and update it from loading the BIOS to loading UEFI. If done correctly, the command cat /sys/firmware/efi/fw_platform_size will return a value of 64 instead of "file does not exist".  
 
@@ -18,28 +18,34 @@ filename: Arch.md
 ## 6. Verify your connection to the internet by using ip link and ping archlinux.org. If the ping command works, you are successfully connected to the internet!  
 
 ## 7. To set up the suggested UEFI table:
-	1. The boot should be 1GB. The measurements are off, so you will want the boot partition to be from 2048 to +1GB
-	2. The SWAP should be the next default to +4GB
-	3. The root should be the remainder of the space that you have - both defaults will work for this.  
+### 1. The boot should be 1GB. The measurements are off, so you will want the boot partition to be from 2048 to +1GB
+### 2. The SWAP should be the next default to +4GB
+### 3. The root should be the remainder of the space that you have - both defaults will work for this.  
 
-## 8. After this, you will need to go back in and change the type of the boot - it's default type will be Linux and you want EFI. Use t and the boot partition (1) with the hex code ef to change the partition type. 
-## 9. Once again, use t and the swap partition with the hex code 82 to change the partition type to Swap for the SWAP partition.
+## 8. After this, you will need to go back in and change the type of the boot - it's default type will be Linux and you want EFI. Use t and the boot partition (1) with the hex code ef to change the partition type.  
+
+## 9. Once again, use t and the swap partition with the hex code 82 to change the partition type to Swap for the SWAP partition.  
+
 ## 10. Formatting the partitions:
-	1. For the root partition (if you followed these instructions, it will be sda3), run mkfs.ext4 /dev/sda3
-	2. For the swap partition (if you followed these instructions, it will be sda2), run mkswap /dev/sda2
-	3. For the efi partition that you created (sda1), run mkfs.fat -F 32 /dev/sda1
-## 11. Mounting:
-## 12. Selecting the Mirrors: there's nothing you need to do for this step, but I highly recommend checking out the mirrors that you will have. You can do this by running cat /etc/pacman.d/mirrorlist
+### 1. For the root partition (if you followed these instructions, it will be sda3), run mkfs.ext4 /dev/sda3
+### 2. For the swap partition (if you followed these instructions, it will be sda2), run mkswap /dev/sda2
+### 3. For the efi partition that you created (sda1), run mkfs.fat -F 32 /dev/sda1  
+
+## 11. Mounting:  
+
+## 12. Selecting the Mirrors: there's nothing you need to do for this step, but I highly recommend checking out the mirrors that you will have. You can do this by running cat /etc/pacman.d/mirrorlist  
+
 ## 13. Installing essential packages. When you run this command, it will take a long time and that is okay and normal! Do not freak out...and you will 100% want to plug in your computer to do this.
-	1. If you only want the necessary items, run pacstrap -K /mnt base linux linux-firmware
-	2. In the documentation, it recommends you installing more packages than this to be of assistance. 
-		1. I have an AMD processor on my computer, so I used amd-ucdoe. If yours has Intel, use intel-ucode.
-		2. I also thought the sound open firmware would be cool, so I threw that in there as well with sof-firmware
-		3. You will eventually want a network manager, so I used the networkmanager package.
-			1. I chose the NetworkManager since it was the most compatible Network Manager. There are other options, but this is the one that I would recommend using due to its compatibility and its ease.
-		4. Won't be caught dead without nano. Added onto the command by typing nano
-		5. Need Vim too - vim
-		6. All of the man pages... use man-db, man-pages, and texinfo addons to the command.
+### 1. If you only want the necessary items, run pacstrap -K /mnt base linux linux-firmware
+### 2. In the documentation, it recommends you installing more packages than this to be of assistance. 
+#### 1. I have an AMD processor on my computer, so I used amd-ucdoe. If yours has Intel, use intel-ucode.
+#### 2. I also thought the sound open firmware would be cool, so I threw that in there as well with sof-firmware
+#### 3. You will eventually want a network manager, so I used the networkmanager package.
+##### 1. I chose the NetworkManager since it was the most compatible Network Manager. There are other options, but this is the one that I would recommend using due to its compatibility and its ease.
+#### 4. Won't be caught dead without nano. Added onto the command by typing nano
+#### 5. Need Vim too - vim
+#### 6. All of the man pages... use man-db, man-pages, and texinfo addons to the command.  
+
 ## 14. Run genfstab -U /mnt >> /mnt/etc/fstab to establish an fstab file. To ensure it was done correctly, run cat /mnt/etc/fstab
 ## 15. Change root into the arch system by running: arch-chroot /mnt
 ## 16. To set the timezone, run ln -sf /usr/share/zoneinfo/_Region_/_City_ /etc/localtime. Then, you will run hwclock --systohc to generate the /etc/adjtime file.
