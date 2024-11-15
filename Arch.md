@@ -6,15 +6,22 @@ filename: Arch.md
 ## 1. Download the ISO from the Arch Downloads
 	1. Pick any of the US versions - verify the hash value
 	2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.  
-## 2. Before entering the VM, go into your settings and update it from loading the BIOS to loading UEFI. If done correctly, the command cat /sys/firmware/efi/fw_platform_size will return a value of 64 instead of "file does not exist".
-## 3. Also before entering the VM, make sure you have at least a hard drive of 37 GB allocated for this VM. Arch recommends 1GB for the boot, 4GB for the SWAP, and between 23 and 32 GB for the root.
-## 4. When the VM opens, press enter on "Arch Linux install medium"
-## 5. Run the command cat /sys/firmware/efi/fw_platform_size. If it returns a value of 64, congrats! You have properly booted into UEFI mode.
-## 6. Verify your connection to the internet by using ip link and ping archlinux.org. If the ping command works, you are successfully connected to the internet!
+
+## 2. Before entering the VM, go into your settings and update it from loading the BIOS to loading UEFI. If done correctly, the command cat /sys/firmware/efi/fw_platform_size will return a value of 64 instead of "file does not exist".  
+
+## 3. Also before entering the VM, make sure you have at least a hard drive of 37 GB allocated for this VM. Arch recommends 1GB for the boot, 4GB for the SWAP, and between 23 and 32 GB for the root.  
+
+## 4. When the VM opens, press enter on "Arch Linux install medium"  
+
+## 5. Run the command cat /sys/firmware/efi/fw_platform_size. If it returns a value of 64, congrats! You have properly booted into UEFI mode.  
+
+## 6. Verify your connection to the internet by using ip link and ping archlinux.org. If the ping command works, you are successfully connected to the internet!  
+
 ## 7. To set up the suggested UEFI table:
 	1. The boot should be 1GB. The measurements are off, so you will want the boot partition to be from 2048 to +1GB
 	2. The SWAP should be the next default to +4GB
-	3. The root should be the remainder of the space that you have - both defaults will work for this.
+	3. The root should be the remainder of the space that you have - both defaults will work for this.  
+
 ## 8. After this, you will need to go back in and change the type of the boot - it's default type will be Linux and you want EFI. Use t and the boot partition (1) with the hex code ef to change the partition type. 
 ## 9. Once again, use t and the swap partition with the hex code 82 to change the partition type to Swap for the SWAP partition.
 ## 10. Formatting the partitions:
