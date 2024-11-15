@@ -1,5 +1,7 @@
+---
 title: Arch
 filename: Arch.md
+---
 
 ## 1. Download the ISO from the Arch Downloads
 	1. Pick any of the US versions - verify the hash value
