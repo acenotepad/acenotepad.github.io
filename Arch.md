@@ -5,7 +5,7 @@ filename: Arch.md
 
 ## 1. Download the ISO from the Arch Downloads
 	1. Pick any of the US versions - verify the hash value
-	2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.
+	2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.  
 ## 2. Before entering the VM, go into your settings and update it from loading the BIOS to loading UEFI. If done correctly, the command cat /sys/firmware/efi/fw_platform_size will return a value of 64 instead of "file does not exist".
 ## 3. Also before entering the VM, make sure you have at least a hard drive of 37 GB allocated for this VM. Arch recommends 1GB for the boot, 4GB for the SWAP, and between 23 and 32 GB for the root.
 ## 4. When the VM opens, press enter on "Arch Linux install medium"
