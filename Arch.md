@@ -1,3 +1,6 @@
+title: Arch
+filename: Arch.md
+
 ## 1. Download the ISO from the Arch Downloads
 	1. Pick any of the US versions - verify the hash value
 	2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.
@@ -64,9 +67,9 @@
 ## 25. Check your video drivers by running: lscpi -v -d ::03xx and then running: pacman -Ss xf86-video
 ## 26. Can Xorg :0 -configure to configure Xorg ==(NOT SURE THIS WORKED)==
 ## 27. Installing LXQT: pacman -Sy lxqt
-28. Installing Breeze Icons: pacman -Sy breeze-icons
-29. Installing SDDM (recommended display manager): pacman -Sy sddm
-30. Enable and start the sddm service by running systemctl enable sddm.service and systemctl start sddm.service
+## 28. Installing Breeze Icons: pacman -Sy breeze-icons
+## 29. Installing SDDM (recommended display manager): pacman -Sy sddm
+## 30. Enable and start the sddm service by running systemctl enable sddm.service and systemctl start sddm.service
 	1. Note: By running systemctl start sddm.service, you are starting the desktop interface.
-31. In the top left corner of the desktop interface, double-check that it is set to LXQt Desktop
-32. 
+## 31. In the top left corner of the desktop interface, double-check that it is set to LXQt Desktop
+## 32. 
