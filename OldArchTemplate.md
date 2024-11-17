@@ -1,6 +1,6 @@
 ---
-title: Arch
-filename: Arch.md
+title: OldArchTemplate
+filename: OldArchTemplate.md
 ---
 
 ### 1. Download the ISO from the Arch Downloads
@@ -18,8 +18,7 @@ filename: Arch.md
 ### 6. Verify your connection to the internet by using ip link and ping archlinux.org. If the ping command works, you are successfully connected to the internet!  
 
 ### 7. To set up the suggested UEFI table:
-#### 7.1. The [Arch Installation Documentation.md](https://github.com/user-attachments/files/17792261/Arch.Installation.Documentation.md)
-boot should be 1GB. The measurements are off, so you will want the boot partition to be from 2048 to +1GB
+#### 7.1. The boot should be 1GB. The measurements are off, so you will want the boot partition to be from 2048 to +1GB
 #### 7.2. The SWAP should be the next default to +4GB
 #### 7.3. The root should be the remainder of the space that you have - both defaults will work for this.  
 
