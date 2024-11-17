@@ -1,3 +1,8 @@
+---
+title: Arch
+filename: Arch.md
+---
+
 1. Download the ISO from the Arch Downloads
 	1. Pick any of the US versions - verify the hash value
 	2. You do NOT need to alter anything on your computer except within your VM - do not change anything else.
