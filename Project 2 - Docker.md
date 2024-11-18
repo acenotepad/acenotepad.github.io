@@ -1,3 +1,8 @@
+---
+title:Docker2
+filepath:/Docker2.md
+---
+
 This is a guide to install Docker Desktop on Ubuntu Linux
 
 I had to make myself a sudoer, which I did by escalating to root and editing the sudoers file by adding: echo ' username ALL=(ALL) ALL >> /etc/sudoers
