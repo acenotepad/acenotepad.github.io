@@ -47,6 +47,7 @@ filename: Docker.md
 ##### 2.1. -d runs the docker container in the background - it does not find it locally, so it installs it to run  
 ##### 2.2. -p publishes the container to the host  
 ##### 2.3 The rest of the command names the new container 'openvas' and uses the image from mikesplain/openvas as the base for the container.  
+![0Openvas_DockerRun](https://github.com/user-attachments/assets/79988c52-29f1-4715-a5c9-1f38982fd150)  
 #### 3. I created an directory titled 'openvasdocker' and made the docker-compose.yml file by downloading the yml file from the github repo to it.  
 ![0DockerComposeFile](https://github.com/user-attachments/assets/e93b673e-ca21-4cc0-bc5d-81c93a98a367)  
 #### 4. After this is done TAKE A SNAPSHOT OF YOUR MACHINE. If you mess up the next part, you will want to have a snapshot to revert to so you do not lose your progress entirely.  
@@ -74,4 +75,5 @@ filename: Docker.md
 #### *Download the latest DEB package. To install it, cd into your Downloads folder and run sudo apt-get install ./docker-desktop-amd64.deb. Be prepared to get an error message at the end about something being unsandboxed as root - this is expected.*  
 #### *Before opening the Docker Desktop, you must make sure the CORRECT kvm module is installed. I have the wrong one installed on my VMs apparently and it will not allow me to install the correct ones.*  
 ##### *Altering the settings of the virtual machine to enable Virtualization before opening the machine: Edit Virtual Machine Settings -> Processors -> Virtualize Engine -> Click both checkboxes.*  
-##### *Disable Hypervisor on your home machine: Run cmd as Administrator -> bcedit /set hypervisorlaunchtype off*  
+##### *Disable Hypervisor on your home machine: Runcmd as Administrator -> bcedit /set hypervisorlaunchtype off*  
+
