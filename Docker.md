@@ -22,6 +22,7 @@ filename: Docker.md
 ##### 1.2. This process installs NEW packages:  containerd.io docker-buildx-plugin docker-ce docker-ce-cli; docker-ce-rootless-extras docker-compose-plugin git git-man liberror-perl; libslirp0 pigz; slirp4netns
 #### 2. To test the install, run **sudo docker run hello-world**
 ##### 2.1. This runs a 'Welcome to Docker' message! If your output matches the screenshot below, congrats! You've installed Docker properly!
+
 #### 3. Docker Compose should have been installed either with the prior Docker install or the Docker Engine install. If you are able to run docker compose version and get a version number, you have Docker Compose ready to go!
 
 ### Part 3: The OpenVas Container and the Security Scan
@@ -30,7 +31,8 @@ filename: Docker.md
 ##### 2.1. -d runs the docker container in the background - it does not find it locally, so it installs it to run
 ##### 2.2. -p publishes the container to the host
 ##### 2.3 The rest of the command names the new container 'openvas' and uses the image from mikesplain/openvas as the base for the container.
-#### 3. I created an directory titled 'openvasdocker' and made the docker-compose.yml file by downloading the yml file from the github repo to it.
+#### 3. I created an directory tit![0HelloWorld](https://github.com/user-attachments/assets/81a9d040-f3e5-4c72-9952-02ec782c441a)
+led 'openvasdocker' and made the docker-compose.yml file by downloading the yml file from the github repo to it.
 #### 4. After this is done TAKE A SNAPSHOT OF YOUR MACHINE. If you mess up the next part, you will want to have a snapshot to revert to so you do not lose your progress entirely. 
 #### 5. Running the Vulnerability Scan
 ##### 5.1. Go to https://localhost/ and login to the site with credentials admin/admin
