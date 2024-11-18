@@ -9,10 +9,10 @@ filename: Docker.md
 ##### Negative parts are where I ran into problems and was doing the WRONG things. I documented them at the bottom of the page after my sources so that they are not seen except 
 
 ### Part 1: Setting up the apt repository:
-#### 1. Run: **sudo apt-get update** and **sudo apt-get upgrade** (updates and upgrades everything)
-#### 2. Run: **sudo apt-get install ca-certificates curl** (installs ca-certificates and curl)
-#### 3. Run: **sudo install -m 0755 -d /etc/apt/keyrings** (installs in permisison mode and treats all arguments as directories). There was no output when I ran this command.
-#### 4. Run: **sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc** (runs curl on the link and outputs the result to the filepath starting at /etc listed). There was no output when I ran this command.
+   #### 1. Run: **sudo apt-get update** and **sudo apt-get upgrade** (updates and upgrades everything)
+   #### 2. Run: **sudo apt-get install ca-certificates curl** (installs ca-certificates and curl)
+   #### 3. Run: **sudo install -m 0755 -d /etc/apt/keyrings** (installs in permisison mode and treats all arguments as directories). There was no output when I ran this command.
+   #### 4. Run: **sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc** (runs curl on the link and outputs the result to the filepath starting at /etc listed). There was no output when I ran this command.
 #### 5. Run: **sudo chmod a+r /etc/apt/keyrings/docker.asc** (assigns user, group, and others the read permission for the file with the part starting at /etc). There was no output when I ran this command.
 #### 6. Run: **echo \ "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \ $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null**. There was no output when I ran this command.
 
