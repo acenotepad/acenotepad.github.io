@@ -18,8 +18,11 @@ filename: Docker.md
 
 ### Part 2: Installing Docker Engine!
 #### 1. Install the latest Docker packages (as of November 15th, 2024) by running **sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin** (installs all of the following packages listed)
+##### 1.1. This process installs packages: docker-ce-rootless-extras git git-man liberror-perl libslirp0 pigz; slirp4netns
+##### 1.2. This process installs NEW packages:  containerd.io docker-buildx-plugin docker-ce docker-ce-cli; docker-ce-rootless-extras docker-compose-plugin git git-man liberror-perl; libslirp0 pigz; slirp4netns
 #### 2. To test the install, run **sudo docker run hello-world**
 ##### 2.1. This runs a 'Welcome to Docker' message! If your output matches the screenshot below, congrats! You've installed Docker properly!
+#### 3. Docker Compose should have been installed either with the prior Docker install or the Docker Engine install. If you are able to run docker compose version and get a version number, you have Docker Compose ready to go!
 
 ### Part 3: The OpenVas Container and the Security Scan
 #### 1. Run **sudo apt-get update** and **sudo apt-get upgrade** to make sure your software is up to date before beginning installation
@@ -43,9 +46,9 @@ filename: Docker.md
 
 
 
-### Part -1: I cannot stress this enough... Do NOT install Docker Desktop... don't be like me. Here is what I did in terms of it though. For real instructions, move onto Part 2 below. 
+### Part -1: I cannot stress this enough... Do NOT install Docker Desktop... don't be like me. Here is what I did in terms of it though. 
 #### *Edit: turns out, I did NOT need docker desktop. Lolz*
 #### *Download the latest DEB package. To install it, cd into your Downloads folder and run sudo apt-get install ./docker-desktop-amd64.deb. Be prepared to get an error message at the end about something being unsandboxed as root - this is expected.*
-#### *Before opening the Docker Desktop, you must make sure the *CORRECT* kvm module is installed. I have the wrong one installed on my VMs apparently and it will not allow me to install the correct ones.*
+#### *Before opening the Docker Desktop, you must make sure the CORRECT kvm module is installed. I have the wrong one installed on my VMs apparently and it will not allow me to install the correct ones.*
 ##### *Altering the settings of the virtual machine to enable Virtualization before opening the machine: Edit Virtual Machine Settings -> Processors -> Virtualize Engine -> Click both checkboxes.*
 ##### *Disable Hypervisor on your home machine: Run cmd as Administrator -> bcedit /set hypervisorlaunchtype off*
