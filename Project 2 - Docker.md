@@ -1,6 +1,6 @@
 ---
-title:Docker2
-filename:Docker2.md
+title: Docker2
+filename: Docker2.md
 ---
 
 This is a guide to install Docker Desktop on Ubuntu Linux
