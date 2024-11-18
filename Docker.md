@@ -10,13 +10,13 @@ filename: Docker.md
 
 ### Part 1: Setting up the apt repository:  
 
-   #### 1. Run: **sudo apt-get update** and **sudo apt-get upgrade** (updates and upgrades everything)  
+#### 1. Run: **sudo apt-get update** and **sudo apt-get upgrade** (updates and upgrades everything)  
    
-   #### 2. Run: **sudo apt-get install ca-certificates curl** (installs ca-certificates and curl)  
+#### 2. Run: **sudo apt-get install ca-certificates curl** (installs ca-certificates and curl)  
    
-   #### 3. Run: **sudo install -m 0755 -d /etc/apt/keyrings** (installs in permisison mode and treats all arguments as directories). There was no output when I ran this command.  
+#### 3. Run: **sudo install -m 0755 -d /etc/apt/keyrings** (installs in permisison mode and treats all arguments as directories). There was no output when I ran this command.  
    
-   #### 4. Run: **sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc** (runs curl on the link and outputs the result to the filepath starting at /etc listed). There was no output when I ran this command.  
+#### 4. Run: **sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc** (runs curl on the link and outputs the result to the filepath starting at /etc listed). There was no output when I ran this command.  
    
 #### 5. Run: **sudo chmod a+r /etc/apt/keyrings/docker.asc** (assigns user, group, and others the read permission for the file with the part starting at /etc). There was no output when I ran this command.  
 ![0BundleCommand](https://github.com/user-attachments/assets/d51f2bc0-aee0-4b83-a95d-33648d36977f)  
