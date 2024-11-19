@@ -97,7 +97,22 @@ filename: Arch.md
 ##### 28.1.2. It is also critical to add the -m. This creates the user's home directory. If you do not add this, you will not be able to access the desktop when you try to login!  
 ##### 28.1.3. I created all of my users back to back to save time, but as long as you have one added, you can navigate the desktop environment.  
 ![AllUsers](https://github.com/user-attachments/assets/2f93d035-9313-4aff-b465-3e4083024571)  
-### 28.2. To properly set the password for your first account, run passwd yourname and follow the instructions in the terminal. Do this for any other user that you know what password to set up for them. You cannot login as this user until you set up a password for them.  
-### 28.3. You can add the users as sudoers any time, but it's easier to do it now than later. For arch, this is the wheel group. The command to add a user to the wheel group is **usermod -a -G wheel yourname**. You still have to nano into the /etc/sudoers file and uncomment the wheel group's access to root before you can run commands.
+#### 28.2. To properly set the password for your first account, run passwd yourname and follow the instructions in the terminal. Do this for any other user that you know what password to set up for them. You cannot login as this user until you set up a password for them.  
+#### 28.3. You can add the users as sudoers any time, but it's easier to do it now than later. For arch, this is the wheel group. The command to add a user to the wheel group is **usermod -a -G wheel yourname**. You still have to nano into the /etc/sudoers file and uncomment the wheel group's access to root before you can run commands.
 ### 29. Enable and start the sddm service (booting up the desktop interface) by running systemctl enable sddm.service and systemctl start sddm.service. If you need to return to your terminal, use Control+Alt+Any F Key to move back to your root terminal.
-### 30. In the top left corner of the desktop interface, double-check that it is set to LXQt Desktop
+
+
+## Part 3: Configuring the Desktop Environment  
+
+### Yay! You now have a desktop environment to work with!  
+
+### 30. In the top left corner of the desktop interface, double-check that it is set to LXQt Desktop.  
+### 31. Sign in with the user you created before. Now you run into a problem - your Computer and Network links on the desktop throw an error "Operation not permitted". Aiden K and DietPi recommended installing gvfs, which allows apps to access remote resources. In this case, it gives the desktop environment permission to access the terminal.
+### 32. Once in the environment, I need to install a terminal other than bash, so I installed fish using pacman -Sy fish
+### 33. I also needed to install ssh, so I ran pacman -Sy ssh
+### 34. Adding aliases - I went to my go-to aliases: **c="clear"** and **update="sudo pacman -Syu"**. Making aliases in fish will NOT save them automatically and export does not do the trick either! What you have to do is include --save after alias (alias --save c="clear. This saves it to a config file in fish to be reused later. These save to /home/USER/.config/fish/functions/c.fish
+![Aliases](https://github.com/user-attachments/assets/18700474-e211-4ac3-a79d-ee72daf87707)  
+### 35. Installed Firefox: sudo pacman -Sy firefox
+### 36. The SysV runlevel I want is the graphical interface, which means my command to change the default boot is **systemctl set-default graphical.target**
+
+## This is all you have to do to install Arch and set up a desktop environment for it!
