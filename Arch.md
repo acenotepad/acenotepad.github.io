@@ -2,6 +2,7 @@
 title: Arch
 filename: Arch.md
 ---
+# Arch Linux Installation Summary
 #### Before beginning: this combines my process not just from the Arch install page, but all of its links and sources to other installation guides that are required to navigate through Arch. This was the simplest way to make a singular, cohesive documentation page. 
 
 ## Section 1: Preparing the VM  
