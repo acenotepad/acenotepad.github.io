@@ -5,4 +5,4 @@ Arch Linux Installation: [Arch](/Arch)
 
 Docker Engine Installation: [Docker](/Docker)
 
-Wireguard (via Docker Compose): [Wireguard]()
+Wireguard (via Docker Compose): [Wireguard](/Wireguard)
