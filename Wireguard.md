@@ -3,7 +3,7 @@ title: Wireguard
 filename: Wireguard.md
 ---
 
-## Project 3
+## Project 3: Wireguard VPN via Docker
 ### DigitalOcean Setup:  
 
 #### 1. Create your DigitalOcean account  
