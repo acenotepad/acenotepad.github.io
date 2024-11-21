@@ -55,10 +55,11 @@ filename: Wireguard.md
 ![Utulsa_Phone_IP](https://github.com/user-attachments/assets/6fed598b-7c1c-4f79-a9b3-40b6c87974d5)  
 
 ##### A3. Back to the Wireguard app! Turn on the VPN and screenshot it running.  
-![VPN_Phone_IP](https://github.com/user-attachments/assets/6d3e4dd5-1528-4068-b8ce-a414ad5707fe)  
+![Wireguard_Phone](https://github.com/user-attachments/assets/bc6e3a7b-4ead-407b-8a1d-28bfac1569bf)  
 
 ##### A4. Back to ipleak.net! Reload the page and note the new IP address. You are now on your own VPN!  
-![Wireguard_Phone](https://github.com/user-attachments/assets/bc6e3a7b-4ead-407b-8a1d-28bfac1569bf)  
+![VPN_Phone_IP](https://github.com/user-attachments/assets/6d3e4dd5-1528-4068-b8ce-a414ad5707fe)  
+
 
 #### 13B. On a laptop:
 ##### B1. Download the Wireguard application and install it. In the bottom left corner, press 'Add Terminal'. 
