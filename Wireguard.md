@@ -69,9 +69,11 @@ filename: Wireguard.md
 
 ##### B4. Press 'Activate' in the Wireguard application - when the light turns green, your VPN has been activated! Screenshot this and reload the ipleak.net page. 
 ![VPN_Laptop_IP](https://github.com/user-attachments/assets/fa278423-e67d-45b8-97e4-2f0fa3d73e58)  
+![Wireguard_Laptop](https://github.com/user-attachments/assets/d9ba3535-cc5e-4b90-94a1-4c7bc0f8bd5b)  
+
 
 ##### B5. Take another screenshot with the new IP. 
-![Wireguard_Laptop](https://github.com/user-attachments/assets/d9ba3535-cc5e-4b90-94a1-4c7bc0f8bd5b)  
+![VPN_Laptop_IP](https://github.com/user-attachments/assets/fa278423-e67d-45b8-97e4-2f0fa3d73e58)  
 
 ## Sources:  
 
