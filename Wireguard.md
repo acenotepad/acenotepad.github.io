@@ -30,10 +30,9 @@ filename: Wireguard.md
 #### 10. Create the directories: 
 ##### 10.1. **mkdir -p ~/wireguard/**
 ##### 10.2. **mkdir -p ~/wireguard/config**
-#### 11. Create the docker-compose.yml file
+#### 11. Create the docker-compose.yml file. You will be altering the Timezone, ServerURL to your URL address, Peers (names will follow naming pattern)
 ##### 11.1. **nano ~/wireguard/docker-compose.yml**
 ##### 11.2. See this file below! 
-		14.2.1. Alter: Timezone, ServerURL to your URL address, Peers (names will follow naming pattern)
 ##### 11.3. Save the file and exit.
 #### 12. Start Wireguard by cd-ing into the wireguard directory (created in step 13) and running **docker compose up -d**
 
@@ -45,8 +44,7 @@ filename: Wireguard.md
 ##### A4. Back to ipleak.net! Reload the page and note the new IP address. You are now on your own VPN!
 #### 13B. On a laptop:
 ##### B1. Download the Wireguard application and install it. In the bottom left corner, press 'Add Terminal'. 
-##### B2. Search for your .conf file that you created in the wireguard directory by running wireguard. 
-	1. Since I used the console instead of opening a VM to run everything on, I copied the contents of the file to a text document and saved it on my desktop as a .conf file and it worked just fine.
+##### B2. Search for your .conf file that you created in the wireguard directory by running wireguard. Since I used the console instead of opening a VM to run everything on, I copied the contents of the file to a text document and saved it on my desktop as a .conf file and it worked just fine.
 ##### B3. Press 'Activate' - when the light turns green, your VPN has been activated! Reload the ipleak.net page and take another screenshot with the new IP. 
 
 ## Sources:  
